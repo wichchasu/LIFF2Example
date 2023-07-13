@@ -28,6 +28,70 @@ function sendMessage() {
     });
 }
 
+function sendMessagebyUserid(userid) {
+  liff
+    .sendMessages([{
+  "to": userid,
+  "messages": [
+    {
+      "type": "flex",
+      "altText": "Flex Message with Approve and Reject Buttons",
+      "contents": {
+        "type": "bubble",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "ข้อความตัวอย่าง",
+              "weight": "bold",
+              "size": "xl",
+              "margin": "md"
+            },
+            {
+              "type": "box",
+              "layout": "horizontal",
+              "margin": "lg",
+              "spacing": "sm",
+              "contents": [
+                {
+                  "type": "button",
+                  "style": "primary",
+                  "action": {
+                    "type": "uri",
+                    "label": "อนุมัติ",
+                    "uri": "https://www.example.com/approve"
+                  },
+                  "flex": 1
+                },
+                {
+                  "type": "button",
+                  "style": "secondary",
+                  "action": {
+                    "type": "uri",
+                    "label": "ปฏิเสธ",
+                    "uri": "https://www.example.com/reject"
+                  },
+                  "flex": 1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
+])
+    .then(() => {
+      window.alert("Message has been sent");
+    })
+    .catch(e => {
+      window.alert(e);
+    });
+}
+
 function login() {
   liff.login();
 }
