@@ -31,7 +31,7 @@ function sendMessage() {
 function sendMessagebyUserid(userid) {
   liff
     .sendMessages([{
-  "to": userid,
+  "to": "U18519e29fc0e6d42dbbbbf9f8bc57b23",
   "messages": [
     {
       "type": "flex",
