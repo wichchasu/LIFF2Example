@@ -51,7 +51,7 @@ $.ajax({
     console.log(response);
   },
   error: function(xhr, status, error) {
-     window.alert(error);
+     window.alert('เกิดข้อผิดพลาดในการส่งข้อความ'+error+" st:"+status);
     console.log('เกิดข้อผิดพลาดในการส่งข้อความ');
     console.log(error);
   }
