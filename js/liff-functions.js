@@ -28,7 +28,7 @@ function sendMessage() {
     });
 }
 
-function sendMessagebyUserid(userid) {
+function sendMessagebyUserid() {
 $.ajax({
   url: 'https://api.line.me/v2/bot/message/push',
   method: 'POST',
