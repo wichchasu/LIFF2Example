@@ -29,8 +29,14 @@ function sendMessage() {
 }
 
 function sendMessagebyUserid(userid) {
-  liff
-    .sendMessages([{
+$.ajax({
+  url: 'https://api.line.me/v2/bot/message/push',
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_CHANNEL_ACCESS_TOKEN'
+  },
+  data: JSON.stringify({{
   "to": "U18519e29fc0e6d42dbbbbf9f8bc57b23",
   "messages": [
     {
@@ -83,13 +89,19 @@ function sendMessagebyUserid(userid) {
     }
   ]
 }
-])
-    .then(() => {
-      window.alert("Message has been sent");
-    })
-    .catch(e => {
-      window.alert(e);
-    });
+),
+  success: function(response) {
+    console.log('ส่งข้อความเรียบร้อยแล้ว');
+    console.log(response);
+  },
+  error: function(xhr, status, error) {
+    console.log('เกิดข้อผิดพลาดในการส่งข้อความ');
+    console.log(error);
+  }
+});
+
+  
+
 }
 
 function login() {
