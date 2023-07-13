@@ -19,7 +19,7 @@ function getContext() {
 
 function sendMessage() {
   liff
-    .sendMessages([{ type: "text", text: "Hello from LIFF2.0" }])
+    .sendMessages([{ type: "text", text: "Hello K Q" }])
     .then(() => {
       window.alert("Message has been sent");
     })
