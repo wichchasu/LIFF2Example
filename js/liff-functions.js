@@ -34,9 +34,9 @@ $.ajax({
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer YOUR_CHANNEL_ACCESS_TOKEN'
+    'Authorization': 'Bearer EAyFSRpFO/b2MAHE9WIfDMflzOfgl8XUKos77YbX1FQ0jD4tl5aUIHYhsNJo3KbVBE0i4H/WctJK8d+6AhIwh3K1RaZ1yjQjK1wQNopBughFHk6CPuXqmu87rnxw50R5s39WokD8Ih/FVLK4VFgSGwdB04t89/1O/w1cDnyilFU='
   },
-  data: JSON.stringify({{
+  data: JSON.stringify({
   "to": "U18519e29fc0e6d42dbbbbf9f8bc57b23",
   "messages": [
     {
