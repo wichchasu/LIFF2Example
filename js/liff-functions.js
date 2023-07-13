@@ -37,59 +37,14 @@ $.ajax({
     'Authorization': 'Bearer EAyFSRpFO/b2MAHE9WIfDMflzOfgl8XUKos77YbX1FQ0jD4tl5aUIHYhsNJo3KbVBE0i4H/WctJK8d+6AhIwh3K1RaZ1yjQjK1wQNopBughFHk6CPuXqmu87rnxw50R5s39WokD8Ih/FVLK4VFgSGwdB04t89/1O/w1cDnyilFU='
   },
   data: JSON.stringify({
-  "to": "U18519e29fc0e6d42dbbbbf9f8bc57b23",
-  "messages": [
-    {
-      "type": "flex",
-      "altText": "Flex Message with Approve and Reject Buttons",
-      "contents": {
-        "type": "bubble",
-        "body": {
-          "type": "box",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "ข้อความตัวอย่าง",
-              "weight": "bold",
-              "size": "xl",
-              "margin": "md"
-            },
-            {
-              "type": "box",
-              "layout": "horizontal",
-              "margin": "lg",
-              "spacing": "sm",
-              "contents": [
-                {
-                  "type": "button",
-                  "style": "primary",
-                  "action": {
-                    "type": "uri",
-                    "label": "อนุมัติ",
-                    "uri": "https://www.example.com/approve"
-                  },
-                  "flex": 1
-                },
-                {
-                  "type": "button",
-                  "style": "secondary",
-                  "action": {
-                    "type": "uri",
-                    "label": "ปฏิเสธ",
-                    "uri": "https://www.example.com/reject"
-                  },
-                  "flex": 1
-                }
-              ]
-            }
-          ]
-        }
+    to: 'U18519e29fc0e6d42dbbbbf9f8bc57b23',
+    messages: [
+      {
+        type: 'text',
+        text: 'ข้อความที่คุณต้องการส่ง'
       }
-    }
-  ]
-}
-),
+    ]
+  }),
   success: function(response) {
     console.log('ส่งข้อความเรียบร้อยแล้ว');
     console.log(response);
