@@ -46,10 +46,12 @@ $.ajax({
     ]
   }),
   success: function(response) {
+     window.alert("ส่งข้อความเรียบร้อยแล้ว");
     console.log('ส่งข้อความเรียบร้อยแล้ว');
     console.log(response);
   },
   error: function(xhr, status, error) {
+     window.alert(error);
     console.log('เกิดข้อผิดพลาดในการส่งข้อความ');
     console.log(error);
   }
